@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import style from './front.module.css'
 import './App.css';
-
+import Content from './Content';
+import Nav from './Nav';
+import Folder from './Folder';
+import { useEffect, useState } from 'react';
+import Terminal from './Terminal';
 function App() {
+const[toogle,setToogle]=useState(false);
+ useEffect(()=>{console.log('Password is : 3000')},[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className={style.main}>
+      <Nav />
+      <Content/>
+      {!toogle?<Folder click={setToogle}/>:null}
+      {toogle?<Terminal click={setToogle}/>:null}
     </div>
+    
   );
 }
 

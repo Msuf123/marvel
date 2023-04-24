@@ -1,0 +1,65 @@
+:root{
+    --user:'Exo 2', sans-serif;
+    --input:'Exo 2', sans-serif;
+}
+
+.main{
+    width: 80vw;
+    position: absolute;
+    top: 30vh;
+    right: 90px;
+    background-color: black;
+    color: rgb(111, 247, 111);
+    min-height: 600px;
+    z-index: 1;
+    border: 5px solid rgb(12, 255, 12) ;
+}
+.main:focus{
+    border: 5px solid rgb(175, 164, 5);
+    background-color: rgb(36, 36, 36);
+}
+.buttons{
+    background-color: grey;
+    display: block;
+    text-align: right;
+}
+.cross{display: inline-block;
+    text-align: center;
+    color: aliceblue;
+    font-size: 2.3em;
+    width: 40px;
+    background-color: rgb(252, 10, 10);
+    transition: all 0.1s linear;
+    border: 0px;
+}
+.cross:hover{
+    background-color: rgba(252, 10, 10,0.5);
+    
+}
+.input{
+    padding-left:20px ;
+ font-size: 1.4em;
+}
+
+.user{
+    font-family: var(--user);
+    
+}
+.cn{
+    
+    width: max-content;
+    display: inline-block;
+}
+.input_feild{
+    font-size: 1.4em;
+    padding: 5px;
+    text-decoration: underline;
+    color: rgb(111, 247, 111);
+    background-color: black;
+    border: 0px;
+}
+.result{
+    width: max-content;
+    margin: auto;
+    
+}

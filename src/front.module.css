@@ -1,0 +1,141 @@
+:root{
+    --loginfont:    'IM Fell Great Primer', serif;
+    --heading:'Exo 2', sans-serif;
+    --para:'Exo 2', sans-serif;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./Media/6221331.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+.content{
+    width: 80vw;
+    height: 70vh;
+    background-color: rgba(17, 23, 121, 0.9);
+    border: 5px solid rgb(16, 5, 65);
+    position: absolute;
+    top: 15vh;
+    left: 2.5vw;
+    border-radius: 15px;
+    z-index: 0;
+}
+.nav{
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(16, 16, 46);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_span{
+    font-size: 2.8em;
+    text-decoration: underline;
+    margin-right: 2vw;
+    color: white;
+    font-family: var(--loginfont);
+    transition: all 0.3s linear ;
+}
+.nav_span:hover{
+    color: rgb(90, 90, 243);
+}
+.nav_img{
+    height: 10vh;
+    margin-left: 5px;
+}
+.folder{
+    position: absolute;
+    top: 80vh;
+    width: 150px;
+    height: 150px;
+    right: 2vw;
+    box-shadow: 0px 0px 15px 10px green; 
+    animation-name: borderr;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; 
+    border-radius: 15px; 
+    background-color: green;
+}    
+@keyframes borderr {
+    0%{ box-shadow: 0px 0px 5px 5px rgb(11, 43, 11); 
+    background-color: rgba(11, 43, 11,0.9);
+    }
+    50%{ box-shadow: 0px 0px 15px 10px rgb(30, 136, 30); 
+    background-color:rgb(30, 136, 30) ;
+    }
+    100%{ box-shadow: 0px 0px 5px 5px rgb(11, 43, 11); 
+        background-color: rgba(11, 43, 11,0.9);
+    }
+}
+.folder_img{
+    width:150px;
+    padding: 0px;
+    border-radius: 5px;
+}
+.folder:hover{
+  animation-name: a;
+  background-color: rgba(254, 255, 254,0);
+  box-shadow: 0px 0px 0px 0px ;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  
+}
+@keyframes a{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.2);}
+    100%{transform: scale(1);}
+}
+.heading{
+    font-size: 2.9em;
+    text-align: center;
+    color: aliceblue;
+    font-family: var(--heading);
+}
+.para{
+    color: aliceblue;
+    font-size: 1.5em;
+    padding: 10px;
+    font-family: var(--para);
+}
+.h_two{
+    color: aliceblue;
+    font-size: 3.5em;
+    text-align: center;
+    background-color: red;
+    width: max-content;
+    margin: auto;
+    padding: 10px;
+    border-radius:5px ;
+    
+}
+
+@media only screen  and (max-width:1232px) {
+    .main
+    {display: none;}
+}
+@media only screen  and (min-width:1902px) {
+    .para
+    {font-size: 1.9em;}
+}
+@media only screen  and (max-width:1852px) {
+    .content
+    {font-size: 1.1em;
+        width: 1000px;}
+
+}
+@media only screen and (max-height:725px){
+    .main{
+        display: none;
+    }
+    
+}
+@media only screen and (min-height:847px){
+    .content{
+        height: 500px;
+    }
+    
+}
