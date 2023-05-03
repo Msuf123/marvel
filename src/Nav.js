@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import style from './front.module.css'
 import logo from './Media/logo.png'
 export default function Nav(){

@@ -2,10 +2,11 @@ import terminall from './terminal.module.css'
 import Cursor from './TerminalCursor'
 import { useState } from 'react'
 import Output from './Output';
+import { useNavigate } from 'react-router-dom';
 export default function Terminal(props){
     const[string,setValue]=useState([]);
     const[correct,setCorrect]=useState(false);
-    
+    const navigate=useNavigate()
     
     return(
         <div className={terminall.main}  tabIndex={2} onKeyDown={(e)=>{
@@ -15,6 +16,7 @@ export default function Terminal(props){
                 if(string.join('')==='3000'){
                     console.log('Password correct')
                     setCorrect(true)
+                    setTimeout(()=>{navigate('/second')},5000)
 
                 }
                 else{console.log('Password Incorrect')
