@@ -1,0 +1,6 @@
+.main{
+    background-color: rgb(41, 44, 46);
+    
+    width: 100%;
+    height: max(10vh,100px);
+}

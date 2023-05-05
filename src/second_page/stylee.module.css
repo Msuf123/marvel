@@ -3,6 +3,7 @@
     background-color: black;
     position: relative;
     min-height: 100vh;
+    
    
 }
 .input{
@@ -17,14 +18,13 @@
     outline: none;
 }
 .first{
-    position: absolute;
-    top: 20vh;
-    right: 0px;
-    left: 0px;
+
 justify-content: space-around;
 display: flex;
-width: 35%;
-margin: auto;
+width: 450px;
+
+margin: 7vh auto 0vh;
+
 }
 .first input{
     background-color: gray;
@@ -35,9 +35,11 @@ margin: auto;
     height: 40px;
     margin: 0px;
     padding: 10px;
-    background-color: rgb(230, 127, 58);
+    color: rgb(20, 24, 27);
+    font-weight: bold;
+    background-color: rgb(133, 130, 130);
     border: 0px;
-    box-shadow: 0px 0px 6px 3px rgb(122, 57, 45);
+    box-shadow: 0px 0px 6px 3px rgb(160, 160, 160);
     border-radius: 10px;
 }
 .buttonn:hover{
@@ -47,12 +49,41 @@ margin: auto;
 .button_two{
     height: 40px;
     margin: 0px;
+    font-weight: bold;
+    color: rgb(19, 22, 24);
     padding: 10px 20px;
-    background-color: rgb(207, 44, 207);
+    background-color: rgb(136, 130, 136);
     border: 0px;
-    box-shadow: 0px 0px 6px 3px rgb(114, 7, 114);
+    box-shadow: 0px 0px 6px 3px rgb(129, 129, 129);
     border-radius: 10px;
 }
 .button_two:hover{
     box-shadow: 0px 0px 10px 9px rgb(99, 35, 99);
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    margin: 10vh auto;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(17, 17, 17);
+}
+.info img{
+    width: min(50%,400px);
+    max-height: 400px;
+    border-radius:5px;
+}
+.innerdiv{
+    color: aliceblue;
+    width: 50%;
+}
+.name{
+    color: whitesmoke;
+   
+    text-align: center;
+}
+.innerdiv p{
+    padding: 10px;
+    font-size: max(1.3em,1.9vw)
 }
