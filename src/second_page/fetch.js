@@ -11,9 +11,10 @@ export default async function  make(nname){
  }).catch(()=>{return false})
 
 try{
-let array=[[result.data.results[0],result.data.results[0].thumbnail]]
+let array=[[result.data.results[0],result.data.results[0].thumbnail],[result.data.results[0].comics.items]]
 console.log(array[0][0].name)
 console.log(array[0][0].description)
+console.log(array)
 return array}
 catch{
   if(!result){

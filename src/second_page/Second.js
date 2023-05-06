@@ -1,6 +1,8 @@
 import style from './stylee.module.css'
 import Find from './Find';
+import Nonet from './Nonet';
 export default function Second(props){
+   
    
     let shouldd=props.should
     
@@ -18,13 +20,14 @@ export default function Second(props){
     catch{
       if(!fetched_json){
          
-      return (<h1>no net connection right now</h1>)
+      return (<Nonet/>)
     }
     else{
       
             return(
-               
-            <Find value={props.name}/>
+               <div>
+            {props.window?<Find value={props.name} setWindow={props.setWindow} setName={props.setName} Nametodisplay={props.Nametodisplay} setShould={props.setShould}/> :null}
+            </div>
             )
     }
    }

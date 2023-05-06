@@ -127,7 +127,7 @@
         width: 1000px;}
 
 }
-@media only screen and (max-height:725px){
+@media only screen and (max-height:765px){
     .main{
         display: none;
     }
@@ -135,7 +135,7 @@
 }
 @media only screen and (min-height:847px){
     .content{
-        height: 500px;
+        height: 600px;
     }
     
 }

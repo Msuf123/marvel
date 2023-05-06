@@ -1,0 +1,65 @@
+.main{
+    margin: auto;
+    width: 50%;
+    height: 100px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main div{
+    width: 15px;
+    height: 60px;
+    background-color: aliceblue;
+    margin: 0px 4px;
+    
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite ;
+}
+.one{
+    animation-name: roll;
+    
+}
+.two{
+    animation-name: roll_t;
+    
+}
+.three{
+    animation-name: roll_th;
+    
+}
+.four{
+    animation-name: roll_f;
+    
+}
+@keyframes roll {
+    0%{transform: scale(1);}
+    25%{transform: scale(1.2);}
+    50%{transform: scale(1);}
+    75%{transform: scale(1);}
+    100%{transform: scale(1);}
+}
+@keyframes roll_t {
+    0%{transform: scale(1);}
+    25%{transform: scale(1);}
+    50%{transform: scale(1.2);}
+    75%{transform: scale(1);}
+    100%{transform: scale(1);}
+}
+@keyframes roll_th {
+    0%{transform: scale(1);}
+    25%{transform: scale(1);}
+    50%{transform: scale(1);}
+    75%{transform: scale(1.2);}
+    100%{transform: scale(1);}
+}
+@keyframes roll_f {
+    0%{transform: scale(1);}
+    25%{transform: scale(1);
+    }
+    50%{transform: scale(1);}
+    75%{transform: scale(1);}
+    100%{transform: scale(1.2);}
+}
+

@@ -1,0 +1,20 @@
+.main{
+    background-color:transparent;
+    width: 80%;
+    margin: auto;
+    height: min(300px,40vh);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-20%);
+}
+
+.main img{
+    width:min(100px,40vw) ;
+   
+    display: block;
+    margin: auto;
+    animation-name: run;
+   
+    
+}
