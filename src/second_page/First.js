@@ -7,20 +7,29 @@ export default function First(props){
         
         props.setIsLoading(true)
         let result_array=await  make(props.name).then((a)=>{return a})
+        //console.log(result_array)
         
+        if(result_array === 'name not found'){
         
-        props.setJson(result_array)
-        props.toogle_should(true)
-
-        if(!result_array){
+            //console.log('i am inside name not found')
+            props.setJson(result_array)
+            
             setTimeout(()=>{
                 props.setIsLoading(false)
+               // props.setWindow(true)
             },2000)
+            
+               
+           
+
         }
-        else{props.setIsLoading(false)
-        
+        else if(result_array.length!=='name not found'){
+            console.log('character found and values are set')
+            
+            props.setJson(result_array)
+            props.setIsLoading(false)
+                
         }
-        props.setWindow(true)
         
     }
     return(
@@ -38,7 +47,7 @@ export default function First(props){
         ref={valuee}></input>
         <button className={stylee.button_two} onClick={()=>{
            
-            serach()}}><i class="fa fa-search"></i></button>
+            serach()}}><i className={'fa fa-search'}></i></button>
         </div>
         </div>
     )

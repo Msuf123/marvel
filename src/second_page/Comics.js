@@ -11,7 +11,7 @@ export default function Comics(props){
     setImg(ans.data.results[0].thumbnail)
     setPrice(ans.data.results[0].prices[0].price)
     setDisplay(true)
-  })
+  },[props.name])
 
 
 

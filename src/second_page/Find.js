@@ -9,40 +9,13 @@ export default function Find(props){
  const [result,setResult]=useState([])
  const[renderr,setRenderr]=useState(false)
  const[error,setError]=useState(false)
- 
+ const[once,setOnce]=useState('once')
  let result_array=null;
  let run=async()=>{
-    let name=props.value;
-        if(props.value[0]==='%20'){
-        props.value.shift()
-        
-        }
-        
-    
-        for(let  i=0;i<props.value.length;i++){
-            if(props.value[i]==='%20'){
-                name=props.value.slice(0,i)
-                break
-            }
-        }
-        
-        name=name.join('')
-        
+   let name=props.value
+   console.log(props.value)
         let reco_url=`${url}${name}&ts=1${key}${hash}`
-        await fetch(reco_url).then(a=>{return a.json()}).then((response)=>{
-            //console.log(response.data.results)
-           result_array=response.data.results
-           setResult(result_array)
-           
-           setTimeout(()=>{setRenderr(true)
-            if(result_array.length===0){
-                setError(true)
-                
-               }
-        },700)
-        })
-            
-            setResult(result_array)
+        
             
             
 
@@ -52,7 +25,7 @@ export default function Find(props){
     useEffect(()=>{
         run()
         
-    },[])
+    },[once])
 
     let t=2
     
@@ -69,7 +42,7 @@ export default function Find(props){
                 {result.map((i)=>{return <span key={result.indexOf(i)} tabIndex={t+result.indexOf(i)} >{i.name}</span>})}
            
             </div>:null}
-            {error?<Error></Error>:null}
+            
         </div>
     )
 }

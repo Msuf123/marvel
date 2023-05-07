@@ -4,7 +4,7 @@ export default function Nonet(){
     return(
         <div className={style.nonet}>
            <img alt='iron man ironing his clothes' src={img}></img>
-           <h1>Looks like you not connected to the internet.</h1>
+           <h1>Could not connect to the server </h1>
         </div>
     )
 }
