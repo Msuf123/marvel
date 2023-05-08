@@ -25,6 +25,7 @@ throw Error
  .then((ans)=>{
   //console.log(ans)
   if(ans.data.results.length!==0){
+    
   let array=[[ans.data.results[0],ans.data.results[0].thumbnail],[ans.data.results[0].comics.items],[ans.data.results[0].series.items]]
   
   //console.log(array)

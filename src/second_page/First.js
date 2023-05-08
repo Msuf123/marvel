@@ -31,10 +31,11 @@ export default function First(props){
             },1000)
         }
         else if(result_array.length!=='name not found'&&result_array!=='error'){
-            console.log('character found and values are set')
+            //console.log('character found and values are set')
             
             props.setJson(result_array)
             props.setIsLoading(false)
+            
                 
         }
         else if(result_array==='error'){

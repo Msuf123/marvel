@@ -33,7 +33,8 @@ let hash='hash=0c7b91e9033c06d4b3091d6a0406cc1f'
     //console.log(name)
     let reco_url=`${url}${name}&ts=1${key}${hash}`
     fetch(reco_url).then((a)=>{return a.json() })
-    .then(ans=>{console.log('suggestion activated');setResult(ans.data.results);setRenderr(true)})
+    .then(ans=>{//console.log('suggestion activated');
+        setResult(ans.data.results);setRenderr(true)})
  }}
     useEffect(()=>{
         

@@ -35,9 +35,11 @@ export default function Parent(){
    
     },[name])
     useEffect(()=>{
-        console.log(fetched_json)
+       // console.log(fetched_json)
         if(fetched_json!==null&&fetched_json!=='name not found'){
             setShould(true)
+            
+            //console.log('value changed')
         }
         else if(fetched_json==='name not found'){
             //setWindow('true')
@@ -55,7 +57,7 @@ export default function Parent(){
     {should?<Second fetched_json={fetched_json} setName={setName} should={should} name={name} window={window} setWindow={setWindow} Nametodisplay={Nametodisplay} setShould={setShould} /> :null}
     {should&&!window&&fetched_json!=='name not found'?<Info setSries={setSries} series={series}/>:null}
     {window?<Find value={name} name={fetched_json}setWindow={setWindow} setName={setName} Nametodisplay={Nametodisplay} setShould={setShould}/> :null}
-    {should&&series&&!window&&fetched_json!=='name not found'?<Series/>:null}
+    {should&&series&&!window&&fetched_json!=='name not found'?<Series value={fetched_json[1]}/>:null}
     {should&&!series&&!window&&fetched_json!=='name not found'?<Comics/>:null}
     {should&&!window&&fetched_json!=='name not found'?<Bottom/>:null}
     

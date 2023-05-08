@@ -12,13 +12,12 @@ export default function Animation(){
         <div className={style.d}>
             
         <img src={src} alt='all shuperhor image'></img>
-        <img src={src_t} alt='all shuperhor image'></img>
         <img src={src_th} alt='all shuperhor image'></img>
         <img src={thor} alt='all shuperhor image'></img>
         <img src={peter} alt='all shuperhor image'></img>
         
         <img src={nebula} alt='all shuperhor image'></img>
-        
+        <img src={src_t} alt='all shuperhor image'></img>
 
        
         </div>
