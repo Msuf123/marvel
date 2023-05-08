@@ -50,10 +50,10 @@ export default function Parent(){
     <First setName={setName} name={name} setNonet={setNonet} setJson={setFetch_json} fetched={fetched_json} toogle_should={setShould} setIsLoading={setIsLoading} setWindow={setWindow} setNametodisplay={setNametodisplay}/>
     {nonet?<Nonet/>:null}
     {should?<Second fetched_json={fetched_json} setName={setName} should={should} name={name} window={window} setWindow={setWindow} Nametodisplay={Nametodisplay} setShould={setShould} /> :null}
-    {should?<Info setSries={setSries} series={series}/>:null}
+    {should&&!window&&fetched_json!=='name not found'?<Info setSries={setSries} series={series}/>:null}
     {window?<Find value={name} name={fetched_json}setWindow={setWindow} setName={setName} Nametodisplay={Nametodisplay} setShould={setShould}/> :null}
-    {should&&series?<Series/>:null}
-    {should&&!series?<Comics/>:null}
+    {should&&series&&!window&&fetched_json!=='name not found'?<Series/>:null}
+    {should&&!series&&window&&fetched_json!=='name not found'?<Comics/>:null}
     
     
 

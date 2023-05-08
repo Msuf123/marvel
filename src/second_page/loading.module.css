@@ -9,7 +9,7 @@
 .main img{
     display: block;
     margin: 10vh auto;
-    width: max(400px,20vw);
+    width: min(400px,80vw);
     animation-name: loading;
     
     animation-timing-function: linear;

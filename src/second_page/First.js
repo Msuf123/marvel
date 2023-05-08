@@ -6,6 +6,7 @@ export default function First(props){
     let serach=async()=>{
         
         props.setIsLoading(true)
+        //props.setJson([])
         let result_array=await  make(props.name).then((a)=>{return a})
         //console.log(result_array)
         

@@ -5,10 +5,19 @@ import Nav from './Nav';
 import Folder from './Folder';
 import { useEffect, useState } from 'react';
 import Terminal from './Terminal';
+import {  navigate,useNavigate } from 'react-router-dom';
 
 function App() {
+const[h]=useState(window.innerHeight)
+const[w]=useState(window.innerWidth)
 const[toogle,setToogle]=useState(false);
- useEffect(()=>{console.log('Password is : 3000')},[])
+const navigate=useNavigate()
+ useEffect(()=>{console.log('Password is : 3000')
+
+if(h<765||w<1232){
+  navigate('second')
+}
+},[h,w])
   return (
 
     <div className={style.main}>
