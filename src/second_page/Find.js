@@ -4,8 +4,10 @@ import Divl from './DIVL'
 import Error from './Error'
 export default function Find(props){
     let url='https://gateway.marvel.com:443/v1/public/characters?nameStartsWith='
-    let key='&apikey=c98fbeeb5caa55720e4d631e307cd636&'
- let hash='hash=5e398d887de9037c442d6bc0756f96e4'
+//         let key='&apikey=c98fbeeb5caa55720e4d631e307cd636&'
+//  let hash='hash=5e398d887de9037c442d6bc0756f96e4'
+let key='&apikey=ac08bd94561f430f895f27cde01380d5&'
+let hash='hash=0c7b91e9033c06d4b3091d6a0406cc1f'
  const [result,setResult]=useState([])
  const[renderr,setRenderr]=useState(false)
 

@@ -23,12 +23,18 @@ export default function First(props){
            
 
         }
-        else if(result_array.length!=='name not found'){
+        else if(result_array.length!=='name not found'&&result_array!=='error'){
             console.log('character found and values are set')
             
             props.setJson(result_array)
             props.setIsLoading(false)
                 
+        }
+        else if(result_array==='error'){
+            setTimeout(()=>{
+                props.setIsLoading(false)
+                props.setNonet(true)
+            },1000)
         }
         
     }
