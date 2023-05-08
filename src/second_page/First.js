@@ -24,6 +24,12 @@ export default function First(props){
            
 
         }
+        else if(result_array==='over limit'){
+            setTimeout(()=>{
+                props.setIsLoading(false)
+                props.setOver(true)
+            },1000)
+        }
         else if(result_array.length!=='name not found'&&result_array!=='error'){
             console.log('character found and values are set')
             
@@ -40,7 +46,7 @@ export default function First(props){
         
     }
     return(
-        <div >
+        
         <div className={stylee.first}>
             
         <input type="text" className={stylee.input} maxLength='45' placeholder='Type the word or the name'
@@ -56,6 +62,6 @@ export default function First(props){
            
             serach()}}><i className={'fa fa-search'}></i></button>
         </div>
-        </div>
+        
     )
 }

@@ -15,6 +15,9 @@ let hash='hash=0c7b91e9033c06d4b3091d6a0406cc1f'
   if(json.status===200){
     //console.log(json)
    return json.json()}
+   else if(json.status===429){
+    return 'over limit'
+   }
    else{
 throw Error
    }

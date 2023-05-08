@@ -18,7 +18,7 @@ export default function Info(props) {
                     setb({color:'rgb(127, 153, 9)',borderBottom:'5px solid rgb(100, 94, 7)',borderRadius:5})
                 }
             } style={b}>Comics</button>
-            {console.log(a)}
+            
         </div>
     )
 }

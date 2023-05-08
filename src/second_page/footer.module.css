@@ -1,0 +1,18 @@
+.main{
+    width: 100%;
+    height: min(200px,15vh);
+    background-color: rgb(17, 17, 17);
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main img{
+    display: inline-block;
+    width: min(200px,30vw);height:min(70px,100%);
+}
+.main span{
+    color: rgb(227, 228, 227);
+    display: inline-block;
+}
