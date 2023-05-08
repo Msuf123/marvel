@@ -16,6 +16,7 @@ export default function Parent(){
     const[window,setWindow]=useState(false)
     const[Nametodisplay,setNametodisplay]=useState()
     
+    
     useEffect(()=>{
     for(let i=0;i<name.length;i++){
         if(name[i]===' '){
@@ -34,7 +35,7 @@ export default function Parent(){
             setShould(true)
         }
         else if(fetched_json==='name not found'){
-            setWindow('true')
+            //setWindow('true')
         }
         
     },[fetched_json])
@@ -43,9 +44,9 @@ export default function Parent(){
     <div className={stylee.div}>
     <Animation/>
     {isLoading?<Loading/>:null}
-    <First setName={setName} name={name} setJson={setFetch_json} fetched={fetched_json} toogle_should={setShould} setIsLoading={setIsLoading} setWindow={setWindow} setNametodisplay={setNametodisplay}/>
+    <First setName={setName} name={name}  setJson={setFetch_json} fetched={fetched_json} toogle_should={setShould} setIsLoading={setIsLoading} setWindow={setWindow} setNametodisplay={setNametodisplay}/>
     {should?<Second fetched_json={fetched_json} setName={setName} should={should} name={name} window={window} setWindow={setWindow} Nametodisplay={Nametodisplay} setShould={setShould} /> :null}
-    {window?<Find value={name} setWindow={setWindow} setName={setName} Nametodisplay={Nametodisplay} setShould={setShould}/> :null}
+    {window?<Find value={name} name={fetched_json}setWindow={setWindow} setName={setName} Nametodisplay={Nametodisplay} setShould={setShould}/> :null}
     
     {false?<div className={stylee.comics}>{fetched_json[1][0].map((i)=>{console.log(i.name);return <Comics key={fetched_json[1][0].indexOf(i)} name={i}/>})}</div>:null}
 

@@ -2,8 +2,8 @@ export default async function  make(nname){
  let name=nname.join('');
  let base_url='https://gateway.marvel.com'
  let add_url='/v1/public/characters?name='
- let key='&apikey=ac08bd94561f430f895f27cde01380d5&'
- let hash='hash=0c7b91e9033c06d4b3091d6a0406cc1f'
+ let key='&apikey=c98fbeeb5caa55720e4d631e307cd636&'
+ let hash='hash=5e398d887de9037c442d6bc0756f96e4'
  let url=`${base_url}${add_url}${name}&ts=1${key}${hash}`
  //console.log(name)
  

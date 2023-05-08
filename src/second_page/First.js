@@ -16,7 +16,7 @@ export default function First(props){
             
             setTimeout(()=>{
                 props.setIsLoading(false)
-               // props.setWindow(true)
+               props.setWindow(true)
             },2000)
             
                
