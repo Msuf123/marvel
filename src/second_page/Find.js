@@ -15,7 +15,20 @@ export default function Find(props){
  
  let run=()=>{
     if(props.name==='name not found'){
-    let name=props.value.join('')
+       // console.log(props.value)
+    let name=props.Nametodisplay
+   
+    name=name.split('')
+    for(let i=0;i<name.length;i++){
+        if(name[i]===' '){
+            continue
+        }
+        else{
+            name=name[i]
+            break;
+        }
+    }
+    //console.log(name)
     let reco_url=`${url}${name}&ts=1${key}${hash}`
     fetch(reco_url).then((a)=>{return a.json() })
     .then(ans=>{console.log('suggestion activated');setResult(ans.data.results);setRenderr(true)})
