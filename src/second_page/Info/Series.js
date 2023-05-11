@@ -4,27 +4,16 @@ export default function Series(props){
     
     const[value,setValue]=useState(null)
     let name=props.value[0]
-    
-    if(JSON.stringify(value)!==JSON.stringify(name)){
-        console.log('were not equale and setting them equle')
-        setValue(name)
-    }
-
+  
   useEffect(()=>{ 
-    
-    if(JSON.stringify(value)!==JSON.stringify(name)){
-        console.log(JSON.stringify(value))
-        console.log(JSON.stringify(name))
-        console.log('value are  equale')
-        
-    
-    }
-   
-   console.log(JSON.stringify(value))
-   
-    
-    },)
-   
+    if(value===null){
+    //console.log('setting values')
+    setValue(name)
+    //console.log(value)
+}
+
+
+    },[])
     return(
         <div className={stylee.main}>
             {name.map((i)=>{

@@ -1,7 +1,16 @@
-export default function(){
+import stylee from './detail.module.css'
+export default function(props){
+    let name=props.value[0]
     return(
-        <div style={{height:1000,backgroundColor:"red"}}>
-            <h1>Okay this is comics</h1>
+        <div className={stylee.main}>
+            {name.map((i)=>{
+                let title=i.name
+                return <div className={stylee.items} key={name.indexOf(i)}>
+                    <span>{title}</span>
+                    {false?<img></img>:null}
+                    <span>Price:$</span>
+                </div>
+            })}
         </div>
     )
 }

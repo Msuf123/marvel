@@ -34,6 +34,11 @@ export default function First(props){
             //console.log('character found and values are set')
             
             props.setJson(result_array)
+            // console.log(sessionStorage.getItem('json'))
+            if(sessionStorage.getItem('json')===null){
+                console.log('ran once')
+                sessionStorage.setItem('json',JSON.stringify(result_array))
+            }
             props.setIsLoading(false)
             
                 
@@ -60,8 +65,14 @@ export default function First(props){
         }}
         ref={valuee}></input>
         <button className={stylee.button_two} onClick={()=>{
-           
-            serach()}}><i className={'fa fa-search'}></i></button>
+           if(props.name.length!==0){
+            serach()
+        
+        }
+        else{
+            console.log('please enter the name')
+        }
+        }}><i className={'fa fa-search'}></i></button>
         </div>
         
     )
