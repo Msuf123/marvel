@@ -8,7 +8,7 @@ export default function First(props){
         props.setIsLoading(true)
         //props.setJson([])
         let result_array=await  make(props.name).then((a)=>{return a})
-        //console.log(result_array)
+        console.log(result_array)
         
         if(result_array === 'name not found'){
         
@@ -36,8 +36,9 @@ export default function First(props){
             props.setJson(result_array)
             // console.log(sessionStorage.getItem('json'))
             if(sessionStorage.getItem('json')===null){
-                console.log('ran once')
+                //console.log('ran once')
                 sessionStorage.setItem('json',JSON.stringify(result_array))
+                //console.log(sessionStorage.getItem('key'))
             }
             props.setIsLoading(false)
             
