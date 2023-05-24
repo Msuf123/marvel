@@ -14,7 +14,7 @@ const[toogle,setToogle]=useState(false);
 const navigate=useNavigate()
  useEffect(()=>{console.log('Password is : 3000')
 
-if(h<765||w<1232){
+if(true){
   navigate('second')
 }
 },[h,w])

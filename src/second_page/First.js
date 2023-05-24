@@ -8,7 +8,7 @@ export default function First(props){
         props.setIsLoading(true)
         //props.setJson([])
         let result_array=await  make(props.name).then((a)=>{return a})
-        console.log(result_array)
+        //console.log(result_array)
         
         if(result_array === 'name not found'){
         
